@@ -1,0 +1,31 @@
+ <div class="card-body">
+              <form class="form-signin" id="login" action="" method="post" enctype="multipart/form-data">
+       <input type="hidden" name="action" value="signin" />
+      
+                  <div class="row">
+				    
+                    <div class="col-md-12 ">
+                      <div class="form-group">
+                        
+                        <input type="text" class="form-control" name="email"  placeholder="Email" id="login_username" value="<?=$_COOKIE['pa_username'];?>" required autofocus><br/>
+                      </div>
+                    </div>
+                    <div class="col-md-12">
+                      <div class="form-group">
+                       
+                        <input type="password" class="form-control" name="password"  placeholder="Password" id="login_password" value="<?=$_COOKIE['pa_password'];?>">
+                      </div>
+                    </div>
+					  </div>
+					    </div>
+						 
+         <label class="checkbox">
+                <input type="checkbox"  name="remember"  id="remember" value="1" <? if($_COOKIE['pa_remember']){ ?> checked<? } ?> > Remember me
+                <span class="pull-right">
+
+                </span>
+            </label>
+			<br/>
+     <button class="btn btn-primary btn-round btn-lg" id="btnlogin" onClick="ProcessForm('#btnlogin','include/submit.php','#login','#notification','','',false)" type="button">Sign in</button>
+  
+          </form>
